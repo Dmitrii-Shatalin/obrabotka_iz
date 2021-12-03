@@ -16,9 +16,9 @@ def DFFTnp(img, orig):
     spectrum, min_val = get_spectrum(k)
     plt.subplot(141)
     plt.imshow(spectrum, cmap='gray', vmin=0, vmax=255)
-    for a in k[0:337]: a[508:520] = min_val #320
+    for a in k[0:337]: a[508:520] = min_val
     for a in k[345:]: a[508:520] = min_val
-    for a in k[335:345]: a[0:508] = min_val #493
+    for a in k[335:345]: a[0:508] = min_val
     for a in k[335:345]: a[515:] = min_val
     res, _ = get_spectrum(k)
     plt.subplot(142)
